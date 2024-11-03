@@ -1,5 +1,5 @@
 ---
-import MainLayout from "@/layouts/MainLayout.astro";
+import MainLayout from '@/layouts/MainLayout.astro';
 import {
   name,
   bio,
@@ -11,26 +11,17 @@ import {
   writingText,
   contactText,
   contactOptions,
-} from "@/data";
-import AboutSection from "@/components/sections/AboutSection.astro";
-import MainSection from "@/components/sections/MainSection.astro";
-import BlogSection from "@/components/sections/BlogSection.astro";
-import Footer from "@/components/Footer.astro";
-import ContactSection from "@/components/sections/ContactSection.astro";
+} from '@/data';
+import AboutSection from '@/components/sections/AboutSection.astro';
+import MainSection from '@/components/sections/MainSection.astro';
+import BlogSection from '@/components/sections/BlogSection.astro';
+import Footer from '@/components/Footer.astro';
+import ContactSection from '@/components/sections/ContactSection.astro';
 ---
 
 <MainLayout>
-  <MainSection
-    navLinks={navLinks}
-    name={name}
-    bio={bio}
-    selectedProjects={selectedProjects}
-  />
-  <AboutSection
-    aboutMe={aboutMe}
-    skills={skills}
-    workExperiences={workExperiences}
-  />
+  <MainSection navLinks={navLinks} name={name} bio={bio} selectedProjects={selectedProjects} />
+  <AboutSection aboutMe={aboutMe} skills={skills} workExperiences={workExperiences} />
   <BlogSection writingText={writingText} />
   <ContactSection contactText={contactText} contactOptions={contactOptions} />
   <Footer navLinks={navLinks} />

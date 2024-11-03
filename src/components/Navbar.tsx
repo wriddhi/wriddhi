@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
-import { useState } from "react";
-import { logo, type NavLink } from "@/data";
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { logo, type NavLink } from '@/data';
 
 type NavbarProps = {
   navLinks: NavLink[];
@@ -28,7 +28,8 @@ export default function Navbar({ navLinks }: NavbarProps) {
   return (
     <nav className="relative top-0 left-0 w-full">
       <div className="flex justify-between items-center p-5">
-        <a href="/" className="logo text-md font-bold">
+        <a href="/" className="logo text-md font-semibold flex">
+          <img src="/favicon.svg" height={40} width={40} alt="" />
           {logo}
         </a>
         <div className="links">
@@ -42,7 +43,7 @@ export default function Navbar({ navLinks }: NavbarProps) {
         </div>
         <motion.div
           className={`flex flex-col md:hidden gap-[3.5px] cursor-pointer z-50 ${
-            isToggled ? "fixed top-6 right-5" : ""
+            isToggled ? 'fixed top-6 right-5' : ''
           }`}
           onClick={() => setIsToggled((prev) => !prev)}
         >

@@ -1,8 +1,9 @@
 ---
-import Navbar from "../Navbar";
-import Section from "../Section.astro";
-import SelectedProjectBox from "../SelectedProjectBox.astro";
+import Navbar from '../Navbar';
+import Section from '../Section.astro';
+import SelectedProjectBox from '../SelectedProjectBox.astro';
 const { navLinks, name, bio, selectedProjects } = Astro.props;
+const firstName = name.split(' ')[0];
 ---
 
 <Section styles="p-1">
@@ -15,7 +16,7 @@ const { navLinks, name, bio, selectedProjects } = Astro.props;
         <h2
           class="intro-text leading-[4rem] md:leading-[8rem] font-bold text-[4rem] md:text-[5rem] lg:text-[6rem] xl:text-[7rem]"
         >
-          I'm {name}.
+          Hey, I'm {firstName}.
         </h2>
       </div>
       <p
@@ -24,12 +25,8 @@ const { navLinks, name, bio, selectedProjects } = Astro.props;
         {bio}
       </p>
     </div>
-    <div
-      class="projects w-[100%] md:w-[30%] md:mr-5 justify-start flex flex-col gap-5"
-    >
-      <h3 class="heading text-slate-600 uppercase font-semibold ml-4">
-        Selected Projects
-      </h3>
+    <div class="projects w-[100%] md:w-[30%] md:mr-5 justify-start flex flex-col gap-5">
+      <h3 class="heading text-slate-600 uppercase font-semibold ml-4">Selected Projects</h3>
       <SelectedProjectBox projects={selectedProjects} />
     </div>
   </div></Section

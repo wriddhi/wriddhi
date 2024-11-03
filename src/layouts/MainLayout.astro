@@ -1,25 +1,29 @@
 ---
-import "@fontsource/poppins/100.css";
-import "@fontsource/poppins/200.css";
-import "@fontsource/poppins/300.css";
-import "@fontsource/poppins/400.css";
-import "@fontsource/poppins/500.css";
-import "@fontsource/poppins/600.css";
-import "@fontsource/poppins/700.css";
-import "@fontsource/poppins/800.css";
-import "@fontsource/poppins/900.css";
-import "@/styles/styles.css";
+import '@fontsource/poppins/100.css';
+import '@fontsource/poppins/200.css';
+import '@fontsource/poppins/300.css';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
+import '@fontsource/poppins/800.css';
+import '@fontsource/poppins/900.css';
+import '@/styles/styles.css';
 
-import { name, bio } from "@/data";
+import { name, bio } from '@/data';
+import { ViewTransitions } from 'astro:transitions';
 
-import { ViewTransitions } from "astro:transitions";
+import { Scroller } from '@/components/ui/Scroller';
+
+const currentPath = Astro.url.pathname;
 
 interface Props {
   title?: string;
   description?: string;
 }
 
-const { title = name, description = bio } = Astro.props as Props;
+const { title = name, description = bio } = Astro.props;
+const image = '/opengraph.png';
 ---
 
 <html lang="en">
@@ -29,11 +33,19 @@ const { title = name, description = bio } = Astro.props as Props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={currentPath} />
+    <meta property="og:image" content={image} />
+    <meta property="og:site_name" content={title} />
+    <meta property="og:locale" content="en_IN" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body>
+  <body class="selection:bg-black selection:text-white">
     <slot />
+    <Scroller client:load client:only="react" />
   </body>
 </html>

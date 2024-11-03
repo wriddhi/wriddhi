@@ -1,13 +1,20 @@
 ---
+import { name, showDeveloperText, contactOptions } from '@/data';
+import type { NavLink } from '@/data';
+
+interface Props {
+  navLinks: NavLink[];
+}
+
 const { navLinks } = Astro.props;
-import { showDeveloperText } from "@/data";
+const firstname = name.split(' ')[0];
 ---
 
 <footer class="bg-gray-50 mt-10">
   <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
     <div class="flex items-center mt-5 justify-between">
       <ul
-        class="flex w-full flex-wrap text-md md:text-lg justify-center items-center mb-6 font-medium"
+        class="flex w-full flex-wrap text-sm md:text-lg justify-center items-center mb-6 font-medium"
       >
         {
           navLinks.map((link) => (
@@ -23,13 +30,13 @@ import { showDeveloperText } from "@/data";
     <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
     <span class="block text-center text-sm text-gray-700 sm:text-center"
       >© {new Date().getFullYear()}
-      <span class="hover:underline">Aether Theme,</span>
+      <span class="hover:underline">Wriddhi Hazra,</span>
       {
         showDeveloperText && (
           <span>
-            maintained by{" "}
-            <a class="text-blue-900" href="https://github.com/thatsmanmeet">
-              thatsmanmeet
+            maintained by{' '}
+            <a class="text-blue-900" href={contactOptions.Github}>
+              {firstname}
             </a>
           </span>
         )

@@ -46,12 +46,15 @@
 
 /* Links */
 .blog a {
-  color: #2980b9;
-  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-style: dotted;
 }
 
 .blog a:hover {
   text-decoration: underline;
+  text-decoration-style: dotted;
 }
 
 /* Blockquotes */

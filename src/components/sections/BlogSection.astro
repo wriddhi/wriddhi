@@ -1,13 +1,10 @@
 ---
-import BlogItem from "../BlogItem.astro";
-import Section from "../Section.astro";
+import BlogItem from '@/components/BlogItem.astro';
+import Section from '@/components/Section.astro';
 const { writingText } = Astro.props;
 
-const allPosts = await Astro.glob("@/pages/blogs/*.md");
-allPosts.sort(
-  (a, b) =>
-    Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate),
-);
+const allPosts = await Astro.glob('@/pages/blogs/*.md');
+allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
 const recentPosts = allPosts.slice(0, 5);
 ---
 
@@ -18,9 +15,7 @@ const recentPosts = allPosts.slice(0, 5);
   >
     <div class="box introduction w-[100%] md:w-[60%] p-5">
       <div class="box-text">
-        <h3
-          class="leading-[4rem] md:leading-[8rem] font-bold text-[4rem] md:text-[6rem]"
-        >
+        <h3 class="leading-[4rem] md:leading-[8rem] font-bold text-[4rem] md:text-[6rem]">
           Writing
         </h3>
         <p
@@ -47,12 +42,8 @@ const recentPosts = allPosts.slice(0, 5);
         </svg></a
       >
     </div>
-    <div
-      class="info-box w-[100%] md:w-[30%] md:mr-5 justify-start flex flex-col gap-5"
-    >
-      <h3 class="heading text-slate-600 uppercase font-semibold ml-4">
-        Recent Blogs
-      </h3>
+    <div class="info-box w-[100%] md:w-[30%] md:mr-5 justify-start flex flex-col gap-5">
+      <h3 class="heading text-slate-600 uppercase font-semibold ml-4">Recent Blogs</h3>
       <div class="flex flex-col p-1">
         {recentPosts.map((post) => <BlogItem post={post} />)}
       </div>
