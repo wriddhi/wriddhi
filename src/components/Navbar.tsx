@@ -28,8 +28,14 @@ export default function Navbar({ navLinks }: NavbarProps) {
   return (
     <nav className="relative top-0 left-0 w-full">
       <div className="flex justify-between items-center p-5">
-        <a href="/" className="logo text-md font-semibold flex">
-          <img src="/favicon.svg" height={40} width={40} alt="" />
+        <a href="/" className="logo text-md font-semibold flex items-center gap-2">
+          <img
+            src="/favicon.svg"
+            height={40}
+            width={40}
+            alt=""
+            className="outline outline-1 rounded-full"
+          />
           {logo}
         </a>
         <div className="links">
