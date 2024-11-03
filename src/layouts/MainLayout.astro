@@ -10,7 +10,7 @@ import '@fontsource/poppins/800.css';
 import '@fontsource/poppins/900.css';
 import '@/styles/styles.css';
 
-import { name, bio } from '@/data';
+import { name, logo, bio } from '@/data';
 import { ViewTransitions } from 'astro:transitions';
 
 import { Scroller } from '@/components/ui/Scroller';
@@ -22,7 +22,7 @@ interface Props {
   description?: string;
 }
 
-const { title = name, description = bio } = Astro.props;
+const { title = name, description = bio.split('. ')[0] + '.' } = Astro.props;
 const image = '/opengraph.png';
 ---
 
@@ -33,14 +33,25 @@ const image = '/opengraph.png';
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+
+    <!-- Facebook Meta Tags -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={currentPath} />
     <meta property="og:image" content={image} />
     <meta property="og:site_name" content={title} />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content={logo} />
+    <meta property="twitter:url" content={currentPath} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
     <meta property="og:locale" content="en_IN" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+
     <title>{title}</title>
     <ViewTransitions />
   </head>

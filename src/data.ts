@@ -7,7 +7,7 @@ export const logo = 'wriddhi.com';
 export type Logo = typeof logo;
 
 // bio for main section
-export const bio = `A passionate full-stack developer skilled in crafting responsive and performant web applications. With experience in technologies like Next.js, React, TypeScript, and Docker, I enjoy solving complex problems and delivering scalable solutions.`;
+export const bio = `Full-stack developer skilled in crafting responsive and performant web applications. With experience in technologies like Next.js, React, TypeScript, and Docker, I enjoy solving complex problems and delivering scalable solutions.`;
 export type Bio = typeof bio;
 
 // about me text for about section
