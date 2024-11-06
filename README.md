@@ -1,4 +1,4 @@
-![hero](https://github.com/user-attachments/assets/517586ab-b6b6-4c6a-8bde-7c213bf48ac5)
+![hero](https://github.com/user-attachments/assets/820438bb-68aa-4b22-9ba4-b3a7ee1ae6c4)
 
 # <img src="public/sunglasses.gif" width="27" height="27" /> Wassup!
 
