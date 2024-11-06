@@ -1,4 +1,4 @@
- ![hero](https://github.com/user-attachments/assets/517586ab-b6b6-4c6a-8bde-7c213bf48ac5)
+![hero](https://github.com/user-attachments/assets/517586ab-b6b6-4c6a-8bde-7c213bf48ac5)
 
 # <img src="public/sunglasses.gif" width="27" height="27" /> Wassup!
 
@@ -70,6 +70,10 @@ Catch me on: [![Twitter][1.1]][1] ● [![GitHub][2.2]][2] ● [![LinkedIn][3.3]]
 <a href="https://github.com/wriddhi/zoid">
   <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=wriddhi&repo=zoid&title_color=ffffff&text_color=c9cacc&icon_color=2bbc8a&bg_color=1d1f21" />
 </a>
+
+# <img src="public/tunes.gif" width="30" height="30" /> Jam with me on Spotify
+
+![spotify-github-profile](https://spotify-github-profile.kittinanx.com/api/view?uid=31zqn3c6dtcfthcu73n5xgbr3i5u&cover_image=true&theme=default&show_offline=false&background_color=121212&interchange=true)
 
 <!-- links to your social media accounts -->
 
