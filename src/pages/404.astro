@@ -1,0 +1,30 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+---
+
+<MainLayout>
+  <main class="grid place-content-center place-items-center gap-10 w-screen h-screen">
+    <h1 class="text-6xl font-bold">Oh no, You're lost</h1>
+    <a
+      href="/"
+      class="flex items-center gap-2 group bg-slate-100 py-1 px-4 rounded-full outline outline-1 outline-slate-200 text-slate-600 hover:text-black"
+    >
+      Go Home
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6 group-hover:translate-x-1 transition duration-300"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+        >
+        </path>
+      </svg>
+    </a>
+  </main>
+</MainLayout>
