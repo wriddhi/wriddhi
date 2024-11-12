@@ -70,12 +70,12 @@ export type Skill = (typeof skills)[number];
 // work experience box for about section of the page
 export const workExperiences = [
   {
-    organisationName: 'ARS Inventif',
-    position: 'Full-Stack Intern',
-    date: 'Nov 2022 - May 2023',
+    organisationName: 'Pujo Atlas',
+    position: 'Frontend Lead',
+    date: 'Sep 2024 - Present',
     info: [
-      'Developed a facial recognition-based attendance system using Next.js, TypeScript, and PostgreSQL.',
-      'Created an LMS platform integrated with attendance tracking and video storage in AWS S3.',
+      'Lead development of a community app that provides real-time information on Durga Puja locations.',
+      'Implemented fuzzy search and marker clustering for real-time Durga Puja locations.',
     ],
   },
   {
@@ -88,12 +88,12 @@ export const workExperiences = [
     ],
   },
   {
-    organisationName: 'Pujo Atlas',
-    position: 'Frontend Lead',
-    date: 'Sep 2024 - Present',
+    organisationName: 'ARS Inventif',
+    position: 'Full-Stack Intern',
+    date: 'Nov 2022 - May 2023',
     info: [
-      'Lead development of a community app that provides real-time information on Durga Puja locations.',
-      'Implemented fuzzy search and marker clustering for real-time Durga Puja locations.',
+      'Developed a facial recognition-based attendance system using Next.js, TypeScript, and PostgreSQL.',
+      'Created an LMS platform integrated with attendance tracking and video storage in AWS S3.',
     ],
   },
 ];
@@ -103,7 +103,7 @@ export type WorkExperience = (typeof workExperiences)[number];
 export const contactOptions = {
   Github: 'https://github.com/wriddhi',
   LinkedIn: 'https://linkedin.com/in/wriddhi-hazra',
-  X: 'https://x.com/wriddhihazra',
+  'Twitter(X)': 'https://x.com/wriddhihazra',
 };
 export type ContactOption = typeof contactOptions;
 

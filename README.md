@@ -6,7 +6,7 @@ My name is Wriddhi and I'm a Software Developer and DevOps Engineer.
 <br/>
 Catch me on: [![Twitter][1.1]][1] ● [![GitHub][2.2]][2] ● [![LinkedIn][3.3]][3] ● [![Discord][4.4]][4]
 
-# <img src="public/rocket.gif" width="27" height="27" /> Technologies & Tools
+# <img src="public/rocket.gif" width="27" height="27" /> Tech Skills
 
 ![Static Badge](https://img.shields.io/badge/OS-Linux-informational?style=for-the-badge&logo=linux&labelColor=black&color=white)
 ![Static Badge](https://img.shields.io/badge/OS-MacOS-informational?style=for-the-badge&logo=apple&labelColor=black&color=white)
@@ -56,22 +56,22 @@ Catch me on: [![Twitter][1.1]][1] ● [![GitHub][2.2]][2] ● [![LinkedIn][3.3]]
 # <img src="public/party.gif" width="30" height="30" /> GitHub Stats
 
 <a href="https://github.com/wriddhi/wriddhi">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=wriddhi&title_color=ffffff&text_color=c9cacc&icon_color=2bbc8a&bg_color=1d1f21&langs_count=3" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=wriddhi&langs_count=3&theme=grawhite" />
 </a>
 
 <a href="https://github.com/wriddhi/wriddhi">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=wriddhi&show_icons=true&line_height=27&count_private=true&title_color=ffffff&text_color=c9cacc&icon_color=2bbc8a&bg_color=1d1f21" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=wriddhi&show_icons=true&line_height=27&count_private=true&theme=graywhite" />
 </a>
 
 <a href="https://github.com/wriddhi/PujoAtlasKol-Web/">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Pujo-Atlas-Kolkata&repo=PujoAtlasKol-Web&title_color=ffffff&text_color=c9cacc&icon_color=2bbc8a&bg_color=1d1f21" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Pujo-Atlas-Kolkata&repo=PujoAtlasKol-Web&theme=graywhite" />
 </a>
 
 <a href="https://github.com/wriddhi/zoid">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=wriddhi&repo=zoid&title_color=ffffff&text_color=c9cacc&icon_color=2bbc8a&bg_color=1d1f21" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=wriddhi&repo=zoid&theme=graywhite" />
 </a>
 
-# <img src="public/tunes.gif" width="30" height="30" /> Jam with me on Spotify
+# <img src="public/tunes.gif" width="30" height="30" /> Spotify Live
 
 ![spotify-github-profile](https://spotify-github-profile.kittinanx.com/api/view?uid=31zqn3c6dtcfthcu73n5xgbr3i5u&cover_image=true&theme=default&show_offline=false&background_color=121212&interchange=true)
 
