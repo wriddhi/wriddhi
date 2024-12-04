@@ -35,8 +35,9 @@ export type NavLink = (typeof navLinks)[number];
 
 // Selected projects (side box) for main section of page
 export const selectedProjects = [
-  { name: 'Pujo Atlas', link: 'https://atlas.ourkolkata.in/' },
-  { name: 'Zoid', link: 'https://zoid.wriddhi.com' },
+  { name: 'Pujo Atlas - 50k users', link: 'https://atlas.ourkolkata.in/' },
+  { name: 'Bskypt - 4k users', link: 'https://bskypt.vercel.app' },
+  { name: 'Zoid - Beta', link: 'https://zoid.wriddhi.com' },
 ];
 export type SelectedProject = (typeof selectedProjects)[number];
 
@@ -104,6 +105,7 @@ export const contactOptions = {
   Github: 'https://github.com/wriddhi',
   LinkedIn: 'https://linkedin.com/in/wriddhi-hazra',
   'Twitter(X)': 'https://x.com/wriddhihazra',
+  BlueSky: 'https://bsky.app/profile/wriddhi.com',
 };
 export type ContactOption = typeof contactOptions;
 
