@@ -42,7 +42,9 @@ export default function Navbar({ navLinks }: NavbarProps) {
           <ul className="hidden md:flex items-center gap-3">
             {navLinks.map((link) => (
               <li key={link.name} className={MenuLinkStyles}>
-                <a href={`${link.href}`}>{link.name}</a>
+                <a target={link.name === 'Resume' ? '_blank' : undefined} href={link.href}>
+                  {link.name}
+                </a>
               </li>
             ))}
           </ul>
@@ -86,6 +88,7 @@ export default function Navbar({ navLinks }: NavbarProps) {
             {navLinks.map((link) => (
               <motion.li variants={item} key={link.name}>
                 <a
+                  target={link.name === 'Resume' ? '_blank' : undefined}
                   href={link.href}
                   className={subMenuLinkStyles}
                   onClick={() => setIsToggled(false)}

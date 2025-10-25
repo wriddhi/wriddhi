@@ -19,7 +19,11 @@ const firstname = name.split(' ')[0];
         {
           navLinks.map((link) => (
             <li>
-              <a class="hover:underline me-4 md:me-6" href={`${link.href}`}>
+              <a
+                target={link.name === 'Resume' ? '_blank' : undefined}
+                class="hover:underline me-4 md:me-6"
+                href={`${link.href}`}
+              >
                 {link.name}
               </a>
             </li>
