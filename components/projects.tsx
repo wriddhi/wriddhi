@@ -2,6 +2,8 @@
 
 import { useRef } from "react";
 import { motion, useInView, Variants } from "motion/react";
+import { projects } from "@/constants/data";
+import { Badge } from "@/components/ui/badge";
 
 export const Projects = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -15,8 +17,8 @@ export const Projects = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.3,
+        staggerChildren: 0.12,
+        delayChildren: 0.2,
       },
     },
   };
@@ -35,52 +37,100 @@ export const Projects = () => {
 
   return (
     <section
+      id="projects"
       ref={containerRef}
-      className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center my-16 md:my-28"
+      className="relative z-10 max-w-7xl mx-auto px-6 my-16 md:my-28 scroll-mt-20"
     >
-      {/* Left side - Content */}
       <motion.div
-        className="space-y-6 md:space-y-8"
+        className="space-y-4 mb-12 md:mb-16"
         variants={containerVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        <div className="space-y-4">
-          <motion.h1
-            variants={itemVariants}
-            className="text-4xl md:text-6xl font-serif text-foreground tracking-tight leading-tight"
-          >
-            Projects
-          </motion.h1>
-          <motion.p
-            variants={itemVariants}
-            className="text-lg text-muted-foreground leading-relaxed"
-          >
-            Things I shipped to escape boredom.
-          </motion.p>
-        </div>
-
-        <motion.div variants={itemVariants} className="flex gap-4">
-          View code
-        </motion.div>
-
-        <motion.div
+        <motion.h2
           variants={itemVariants}
-          className="pt-6 border-t border-border"
+          className="text-4xl md:text-6xl font-serif text-foreground tracking-tight leading-tight"
         >
-          <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm font-mono text-muted-foreground uppercase tracking-widest">
-            <span>Engineer</span>
-            <span className="text-foreground/30">•</span>
-            <span>Perfectionist</span>
-            <span className="text-foreground/30">•</span>
-            <span>Problem Solver</span>
-            <span className="text-foreground/30">•</span>
-            <span>Team Player</span>
-          </div>
-        </motion.div>
+          Selected Works
+        </motion.h2>
+        <motion.p
+          variants={itemVariants}
+          className="text-lg text-muted-foreground leading-relaxed max-w-2xl"
+        >
+          Products and experiments I&apos;ve shipped — from festival-scale
+          traffic to quiet beta launches.
+        </motion.p>
       </motion.div>
 
-      {/* Right side - Profile Card */}
+      <motion.ul
+        className="flex flex-col gap-10 md:gap-14"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+      >
+        {projects.map((project, index) => (
+          <motion.li
+            key={project.name}
+            variants={itemVariants}
+            className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] gap-6 md:gap-10 border-t border-border border-dotted pt-8"
+          >
+            <div className="space-y-3">
+              <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                Project {String(index + 1).padStart(2, "0")}
+              </p>
+              <h3 className="text-3xl md:text-4xl font-serif tracking-tight">
+                {project.name}
+              </h3>
+              <p className="text-sm font-mono uppercase tracking-widest text-muted-foreground">
+                {project.tagline}
+              </p>
+              <div className="flex flex-wrap gap-3 pt-2">
+                <a
+                  href={project.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm underline underline-offset-4 font-serif italic"
+                >
+                  Live site →
+                </a>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground underline underline-offset-4"
+                  >
+                    GitHub
+                  </a>
+                )}
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <p className="text-muted-foreground leading-relaxed">
+                {project.description}
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {project.highlights.map((highlight) => (
+                  <div key={highlight.title} className="space-y-1">
+                    <h4 className="font-serif text-lg">{highlight.title}</h4>
+                    <p className="text-sm text-muted-foreground">
+                      {highlight.detail}
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {project.tech.map((tech) => (
+                  <Badge key={tech} variant="outline">
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          </motion.li>
+        ))}
+      </motion.ul>
     </section>
   );
 };

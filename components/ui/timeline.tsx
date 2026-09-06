@@ -13,7 +13,13 @@ interface TimelineEntry {
   content: React.ReactNode;
 }
 
-export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+export const Timeline = ({
+  data,
+  subtitle = "See what I\u2019ve been up to over the years.",
+}: {
+  data: TimelineEntry[];
+  subtitle?: string;
+}) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, {
@@ -77,9 +83,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         </motion.h1>
         <motion.p
           variants={itemVariants}
-          className="text-lg text-muted-foreground leading-relaxed"
+          className="text-lg text-muted-foreground leading-relaxed max-w-2xl"
         >
-          See what I&apos;ve been up to over the years.
+          {subtitle}
         </motion.p>
       </div>
 
@@ -123,7 +129,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0 w-[2px] bg-linear-to-t from-purple-500 via-blue-500 to-transparent from-0% via-10% rounded-full"
+            className="absolute inset-x-0 top-0 w-[2px] bg-linear-to-t from-foreground/60 via-foreground/30 to-transparent from-0% via-10% rounded-full"
           />
         </div>
       </motion.div>

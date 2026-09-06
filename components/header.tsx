@@ -14,27 +14,21 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import { logo, navLinks } from "@/constants/data";
 
 export const Header = () => {
-  const links = [
-    { name: "Home", href: "/" },
-    { name: "Experience", href: "/experience" },
-    { name: "Project", href: "/project" },
-    { name: "Hobbies", href: "/hobbies" },
-  ];
-
   return (
     <header className="w-full h-16 flex items-center justify-between px-6 gap-1 md:gap-4 sticky top-0 z-50 bg-linear-180 from-background to-transparent">
       <GlassSurface height={40} width={120} distortionScale={-100}>
-        <Link href="/">wriddhi.com</Link>
+        <Link href="/#home">{logo}</Link>
       </GlassSurface>
 
-      <span className="mr-auto"></span>
+      <span className="mr-auto" />
 
       <nav className="hidden md:flex items-center gap-4">
-        <GlassSurface height={40} width={360} distortionScale={-100}>
+        <GlassSurface height={40} width={420} distortionScale={-100}>
           <ul className="flex items-center gap-4">
-            {links.map((link) => (
+            {navLinks.map((link) => (
               <li key={link.name}>
                 <Link href={link.href}>{link.name}</Link>
               </li>
@@ -55,13 +49,13 @@ export const Header = () => {
           </GlassSurface>
           <DrawerContent className="rounded-b-4xl!">
             <DrawerHeader>
-              <DrawerTitle>wriddhi.com</DrawerTitle>
+              <DrawerTitle>{logo}</DrawerTitle>
               <DrawerDescription>
                 Find out a bit more about me.
               </DrawerDescription>
             </DrawerHeader>
             <ul className="no-scrollbar overflow-y-auto px-4 space-y-4 text-lg">
-              {links.map((link) => (
+              {navLinks.map((link) => (
                 <li key={link.name} className="text-center">
                   <Link className="font-serif text-center" href={link.href}>
                     {link.name}
